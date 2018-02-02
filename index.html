@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>canvas | mathdaddy.com</title>
+<title>audioContext | mathdaddy.com</title>
 <link href="/sploip.gif" rel="shortcut icon" type="image/x-icon" />
 <style>
   body {
@@ -37,12 +37,11 @@
 </style>
 </head>
 <body>
-<br />&nbsp;Move your mouse over this. Try another browser if you don't see anything.
-<div id='socialmedia'>
+<!--<div id='socialmedia'>
 <a href='https://www.facebook.com/numbakrunch'><img src='http://png-3.findicons.com/files/icons/818/aquaticus_social/64/facebook.png'></a>
 <a href='https://twitter.com/numbakrunch'><img src='http://png-3.findicons.com/files/icons/818/aquaticus_social/64/twitter.png'></a>
 <a href='https://plus.google.com/+DanSm%C3%AFth0/posts'><img src='http://web16.12679-10.whserv.de/kurse/webbasys/layout/typo3/images/google_plus_logo.png'></a>
-</div>
+</div>-->
 <script type='text/javascript'>
 
 // create web audio api context
@@ -58,8 +57,10 @@ oscillator.connect(audioCtx.destination);
 
 </script>
 
-<button onclick="oscillator.start();sdfgsd">On</button>
-<button onclick="oscillator.stop();sdfgsdf">Off</button>
+<button onclick="oscillator.start();">On</button>
+<button onclick="oscillator.setValueAtTime(440, audioCtx.currentTime);">440</button>
+<button onclick="oscillator.setValueAtTime(660, audioCtx.currentTime);">660</button>
+<button onclick="oscillator.stop();">Off</button>
 <input type="checkbox" checked onClick="alert('Hello.');" />Alert
 
 <script>
